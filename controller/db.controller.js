@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { employeeModel,userModel } = require('../models/db.model');
 
 const connection = async () => {
-    return await mongoose.connect('mongodb://127.0.0.1:27017/EmployeeDB', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+    return await mongoose.connect('mongodb://employee:trCH8bHsIsIsT8Gq@cluster0-shard-00-00.6h8fa.mongodb.net:27017,cluster0-shard-00-01.6h8fa.mongodb.net:27017,cluster0-shard-00-02.6h8fa.mongodb.net:27017/EmployeeDB?ssl=true&replicaSet=atlas-hxu7k6-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 }
 
 const addEmployee = async (req, res) => {
