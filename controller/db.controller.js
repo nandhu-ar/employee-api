@@ -97,7 +97,6 @@ const addUser = async (req, res) => {
         await userModel.create(user);
         res.status(200).json({ "message": "You have successfully registered" });
     } catch (error) {
-        console.log("--error", error)
         res.status(404).json({ "error": "unable to add user details" });
     }
 }

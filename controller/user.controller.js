@@ -22,7 +22,7 @@ const validateLogin = async (req, res) => {
             res.status(200).json(false);
         }
     } catch (error) {
-        res.status(400).json(error);
+        res.status(400).send('respond with error');
     }
 }
 
